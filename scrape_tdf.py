@@ -6,8 +6,7 @@ import pandas as pd
 # Create an Excel writer object
 file_path = os.path.join(os.getcwd(), "tour_de_france_stages2.xlsx")
 with pd.ExcelWriter(file_path, engine='xlsxwriter') as writer:
-    # Loop through stages 4 to 16
-    for stage_number in range(19, 22):
+    for stage_number in range(1, 22):
         url = f"https://www.procyclingstats.com/race/tour-de-france/2024/stage-{stage_number}"
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
         request = Request(url, headers=headers)
