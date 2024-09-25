@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 # Create an Excel writer object
-file_path = os.path.join(os.getcwd(), "tour_de_france_stages2.xlsx")
+file_path = os.path.join(os.getcwd(), "tour_de_france_stages.xlsx")
 with pd.ExcelWriter(file_path, engine='xlsxwriter') as writer:
     for stage_number in range(1, 22):
         url = f"https://www.procyclingstats.com/race/tour-de-france/2024/stage-{stage_number}"
